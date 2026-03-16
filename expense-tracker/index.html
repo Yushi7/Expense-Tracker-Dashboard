@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Finance Dashboard</title>
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Personal Finance Dashboard</h1>
+
+<button id="themeBtn">Toggle Dark Mode</button>
+
+<h3>Set Monthly Pocket Money</h3>
+
+<input type="number" id="initialBalanceInput" placeholder="Enter pocket money">
+<button onclick="setInitialBalance()">Set Balance</button>
+
+<div class="dashboard">
+
+<div class="card">
+<h3>Balance</h3>
+<p id="balance">₹0</p>
+</div>
+
+<div class="card">
+<h3>Income</h3>
+<p id="income">₹0</p>
+</div>
+
+<div class="card">
+<h3>Expense</h3>
+<p id="expense">₹0</p>
+</div>
+
+</div>
+
+<p id="warning"></p>
+
+<h3>Add Transaction</h3>
+
+<form id="form">
+
+<input type="text" id="text" placeholder="Description" required>
+
+<input type="number" id="amount" placeholder="Amount" required>
+
+<select id="type">
+<option value="income">Money Received</option>
+<option value="expense">Money Spent</option>
+</select>
+
+<select id="category">
+<option>Food</option>
+<option>Travel</option>
+<option>Shopping</option>
+<option>Bills</option>
+<option>Entertainment</option>
+<option>Other</option>
+</select>
+
+<button>Add</button>
+
+</form>
+
+<h3>Transactions</h3>
+
+<ul id="list"></ul>
+
+<h3>Expense Distribution</h3>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
